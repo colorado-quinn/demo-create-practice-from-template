@@ -4,15 +4,15 @@ const {
   createPracticeFromTemplate,
 } = require("./helpers");
 
-doesTemplateFitInPractice(funTemplate, 29);
-doesTemplateFitInPractice(funTemplate, 30);
-doesTemplateFitInPractice(funTemplate, 60);
-doesTemplateFitInPractice(funTemplate, 61);
+// doesTemplateFitInPractice(funTemplate, 29);
+// doesTemplateFitInPractice(funTemplate, 30);
+// doesTemplateFitInPractice(funTemplate, 60);
+// doesTemplateFitInPractice(funTemplate, 61);
 
-doesTemplateFitInPractice(advancedTemplate, 59);
-doesTemplateFitInPractice(advancedTemplate, 60);
-doesTemplateFitInPractice(advancedTemplate, 90);
-doesTemplateFitInPractice(advancedTemplate, 91);
+// doesTemplateFitInPractice(advancedTemplate, 59);
+// doesTemplateFitInPractice(advancedTemplate, 60);
+// doesTemplateFitInPractice(advancedTemplate, 90);
+// doesTemplateFitInPractice(advancedTemplate, 91);
 
 //createPracticeFromTemplate(funTemplate, 30);
 //createPracticeFromTemplate(funTemplate, 45);

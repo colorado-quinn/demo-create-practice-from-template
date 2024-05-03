@@ -1,5 +1,5 @@
 const funTemplate = {
-  name: "Fun Template",
+  name: "Fun",
   drills: [
     {
       name: "Warmup",
@@ -20,7 +20,7 @@ const funTemplate = {
 };
 
 const advancedTemplate = {
-  name: "Intermediary Template",
+  name: "Intermediary",
   drills: [
     {
       name: "Warmup",

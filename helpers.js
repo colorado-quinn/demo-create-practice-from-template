@@ -37,9 +37,11 @@ const createPracticeFromTemplate = (template, desiredPracticeDuration) => {
   // modify practice, adding 5 minutes to drills until we fill practiceDuration
   // start from last practice to ensure more important drills get time in case of uneven time distribution
   while (practice.duration < desiredPracticeDuration) {
-    // TODO: check if we've hit drill max duration
+    let drill = practice.drills[drillIndex];
     // add 5 minutes to drills, starting from last drill
-    practice.drills[drillIndex].duration += 5;
+    if (drill.duration < drill.maxDur) {
+      drill.duration += 5;
+    }
 
     practice.duration = sum(practice.drills.map((t) => t.duration));
     drillIndex = drillIndex > 0 ? drillIndex - 1 : practice.drills.length - 1;

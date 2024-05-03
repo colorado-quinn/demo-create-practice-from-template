@@ -1,4 +1,4 @@
-const { funTemplate, intermediaryTemplate } = require("./data");
+const { funTemplate, advancedTemplate } = require("./data");
 const {
   doesTemplateFitInPractice,
   createPracticeFromTemplate,
@@ -9,15 +9,16 @@ doesTemplateFitInPractice(funTemplate, 30);
 doesTemplateFitInPractice(funTemplate, 60);
 doesTemplateFitInPractice(funTemplate, 61);
 
-doesTemplateFitInPractice(intermediaryTemplate, 59);
-doesTemplateFitInPractice(intermediaryTemplate, 60);
-doesTemplateFitInPractice(intermediaryTemplate, 90);
-doesTemplateFitInPractice(intermediaryTemplate, 91);
+doesTemplateFitInPractice(advancedTemplate, 59);
+doesTemplateFitInPractice(advancedTemplate, 60);
+doesTemplateFitInPractice(advancedTemplate, 90);
+doesTemplateFitInPractice(advancedTemplate, 91);
 
 //createPracticeFromTemplate(funTemplate, 30);
 //createPracticeFromTemplate(funTemplate, 45);
-createPracticeFromTemplate(funTemplate, 60);
+//createPracticeFromTemplate(funTemplate, 55);
+//createPracticeFromTemplate(funTemplate, 60);
 
-// createPracticeFromTemplate(intermediaryTemplate, 60);
-// createPracticeFromTemplate(intermediaryTemplate, 75);
-// createPracticeFromTemplate(intermediaryTemplate, 90);
+//createPracticeFromTemplate(advancedTemplate, 60);
+//createPracticeFromTemplate(advancedTemplate, 75);
+createPracticeFromTemplate(advancedTemplate, 90);

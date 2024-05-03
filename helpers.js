@@ -18,9 +18,7 @@ const doesTemplateFitInPractice = (template, practiceDuration) => {
   return doesFit;
 };
 
-const createPracticeFromTemplate = (template, desiredPracticeDuration) => {
-  // TODO: check if template fits in practice
-
+const createIntitialPractice = (template) => {
   const practice = {
     name: template.name,
     drills: template.drills.map((drill) => ({
@@ -32,18 +30,25 @@ const createPracticeFromTemplate = (template, desiredPracticeDuration) => {
     duration: sum(template.drills.map((t) => t.minDur)),
   };
   console.log(`${practice.name} initial: `, practice);
+  return practice;
+};
 
+const createPracticeFromTemplate = (template, desiredPracticeDuration) => {
+  // TODO: check if template fits in practice
+
+  const practice = createIntitialPractice(template);
+
+  // modify practice, adding 5 minutes to drills until we fill desiredPracticeDuration
+  // start from last drill to ensure more important drills get time in case of uneven time distribution
   let drillIndex = practice.drills.length - 1;
-  // modify practice, adding 5 minutes to drills until we fill practiceDuration
-  // start from last practice to ensure more important drills get time in case of uneven time distribution
   while (practice.duration < desiredPracticeDuration) {
     let drill = practice.drills[drillIndex];
     // add 5 minutes to drills, starting from last drill
     if (drill.duration < drill.maxDur) {
       drill.duration += 5;
+      practice.duration = sum(practice.drills.map((t) => t.duration));
     }
 
-    practice.duration = sum(practice.drills.map((t) => t.duration));
     drillIndex = drillIndex > 0 ? drillIndex - 1 : practice.drills.length - 1;
   }
 

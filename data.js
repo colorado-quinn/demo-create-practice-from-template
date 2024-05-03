@@ -19,7 +19,7 @@ const funTemplate = {
   ],
 };
 
-const intermediaryTemplate = {
+const advancedTemplate = {
   name: "Intermediary Template",
   drills: [
     {
@@ -47,5 +47,5 @@ const intermediaryTemplate = {
 
 module.exports = {
   funTemplate,
-  intermediaryTemplate,
+  advancedTemplate,
 };

@@ -1,0 +1,12 @@
+{
+  "name": "demo-create-practice-from-template",
+  "version": "1.0.0",
+  "description": "Small demo app working through a problem prompt around team sports practice sessions and template",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "colorado-quinn",
+  "license": "ISC"
+}
